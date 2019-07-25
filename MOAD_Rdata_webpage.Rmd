@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(agricolae)
 ```
 
-This page contains full statistical result of the paper <span style="font-weight:bold;">"MOAD: Modeling Observation-based Approximate Depedency"</span>, published on the Sourcs 19th IEEE international Working Conference on Source Code Analysis and Manipulation (SCAM 2019).
+This page contains full statistical result of the paper <span style="font-weight:bold;">"MOAD: Modeling Observation-based Approximate Depedency"</span>, published on the 19th IEEE international Working Conference on Source Code Analysis and Manipulation (SCAM 2019).
 
 ## 1. Comparison between model (RQ2, Page 7)
 
