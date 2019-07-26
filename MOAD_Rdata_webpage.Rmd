@@ -14,9 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 library(agricolae)
 ```
 
-This page contains full statistical result of the paper <span style="font-weight:bold;">"MOAD: Modeling Observation-based Approximate Depedency"</span>, published on the 19th IEEE international Working Conference on Source Code Analysis and Manipulation (SCAM 2019).
+This page contains full statistical result of the paper <span style="font-weight:bold;">"MOAD: Modeling Observation-based Approximate Depedency"</span>, in the proceedings of the 19th IEEE international Working Conference on Source Code Analysis and Manipulation (SCAM 2019).
 
-## 1. Comparison between model (RQ2, Page 7)
+## 1. Model Comparison (RQ2, Page 7)
 
 #### Summary of data:
 ```{r 1}
@@ -51,7 +51,7 @@ print(HSD.test(a_both, c('infer', 'scheme'), group=TRUE))
 ```
 
 
-## 2. miss and excess (RQ3, Page 8)
+## 2. Miss and excess (RQ3, Page 8)
 
 #### Summary of data:
 ```{r 2}
@@ -59,7 +59,7 @@ miss_excess <- read.csv("data/miss_excess.csv")
 summary(miss_excess)
 ```
 
-### 2-1. miss between inference models
+### 2-1. Miss between inference models
 
 ```{r 2-1}
 anova_miss <- aov(miss ~ infer, data = miss_excess)
@@ -94,7 +94,7 @@ summary(anova)
 print(HSD.test(anova, c('infer', 'doe'), group=TRUE))
 ```
 
-### 2-2. excess between inference models
+### 2-2. Excess between inference models
 
 ```{r 2-2}
 anova_excess <- aov(excess ~ infer, data = miss_excess)
@@ -152,7 +152,7 @@ summary(sample_size)
 <!-- print(HSD.test(a_fig1_B, 'scheme', group=TRUE)) -->
 
 
-### 3-1. On Once Success model data
+### 3-1. On Once-Success model data
 
 ```{r 3-1}
 sample_size_O <- sample_size[sample_size$infer == 'once_success',]
